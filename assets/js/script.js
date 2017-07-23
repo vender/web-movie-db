@@ -5,11 +5,11 @@ $(document).ready(function() {
 	    var title = $(el).attr('title').substr(0, 35).split('.')[0];
 	    var title = title.split(regex);
 	    var info = getinfo(title).results[0];
-	    console.log(getinfo(title));
-	    if (info.poster_path) {
+	    
+	    if (info) {
 		    $(el).find('.atvImg-layer').attr('data-img', 'https://image.tmdb.org/t/p/w300_and_h450_bestv2' + info.poster_path + '');
 	    }
-		if (info.title) {
+		if (info) {
 			$(el).attr('title', info.title);
 		}
 	    
